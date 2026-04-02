@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CineVault — Curated Cinema</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="logo">Cine<span>vault</span></div>
+    <nav class="nav-pills">
+      <button class="pill active">Films</button>
+      <button class="pill">Watchlist</button>
+      <button class="pill">Reviews</button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>The Art of <em>Cinema,</em><br/>Curated for You.</h1>
+      <p class="hero-sub">A hand-picked selection of cinematic masterworks — from sweeping epics to intimate dramas. Every frame a painting, every story a journey.</p>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">12</span>
+        <span class="stat-label">Films</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Genres</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">94</span>
+        <span class="stat-label">Avg. Score</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION HEADER ===== -->
+  <div class="section-header">
+    <span class="section-title">Featured Films</span>
+    <div class="section-line"></div>
+    <span class="section-count">12 titles</span>
+  </div>
+
+  <!-- ===== GENRE FILTERS ===== -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterMovies('All', this)">All</button>
+    <button class="filter-btn" onclick="filterMovies('Drama', this)">Drama</button>
+    <button class="filter-btn" onclick="filterMovies('Sci-Fi', this)">Sci-Fi</button>
+    <button class="filter-btn" onclick="filterMovies('Thriller', this)">Thriller</button>
+    <button class="filter-btn" onclick="filterMovies('Crime', this)">Crime</button>
+    <button class="filter-btn" onclick="filterMovies('Adventure', this)">Adventure</button>
+  </div>
+
+  <!-- ===== MOVIES GRID ===== -->
+  <div class="movies-grid" id="moviesGrid"></div>
+
+  <!-- ===== MOVIE DETAIL MODAL ===== -->
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closeModal(event)">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+      <div id="modalPoster"></div>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
